@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="background-color: #2C3639;">
+
+    <h1 id="heading" style="text-align: center; color: #DCD7C9; font-family: Arial, Helvetica, sans-serif;">Sorting Visualizer</h1>
+    <div class="chartBox">
+        <canvas id="myChart"></canvas>
+        <div id="buttons">
+            <button onclick="randomizeChart()" id="randomize_btn">Randomize</button>
+            <!-- <button onclick="mergeSort()" id="merge_sort_btn"><strike>Merge Sort</strike></button>
+            <button onclick="quickSort()" id="quick_sort_btn"><strike>Quick Sort</strike></button> -->
+            <button onclick="bubbleSort()" id="bubble_sort_btn">Bubble Sort</button>
+            <button id="merge_sort_btn">More Algorithms Coming Soon!</button>
+        </div>
+        <div class="text">
+            <div id="header" style="display: none;">
+                <h1 style="font-family: Ariel; color: white">How does the Bubble Sort Work?</h1>
+                <hr id="horLine" color: #3F4E4F; width ="500px"; size="2">
+            </div>
+            
+            <div id="explanation" style="display: none; text-align: left;">
+                <p style="color: white; text-indent: 30px">
+                    This algorithm works by looping through the array, 
+                    comparing the starting number to the number right next to it.
+                    If the first number is larger, the algorithm makes a swap, if not, 
+                    nothing happens. The code then moves to the next elements and repeats the process.
+                    After the algorithm runs through the entire array, it will have the largest number at the end. 
+                    The code will keep running this through the array (minus the last number since it's already in place)
+                    until it reaches the desired result. 
+                    Lorem ipsum dolor sit, amet consectetur 
+                    adipisicing elit. Ut ad excepturi amet consequuntur 
+                    a in unde enim voluptas dolore consequatur nemo repellat modi 
+                    accusantium minima, architecto magnam, hic minus doloremque?
+                </P>
+            </div>
+            <div id="bubbleSortPicture" style="display: none;">
+                <img src="/images/bubbleSort2.png" width="750px">
+            </div>
+            
+            <div id="bubble_sort_algorithm" style="display: none;">
+                <p>function bubbleSort(){</p>
+    
+                    <p style="text-indent: 30px;">for(var i = 0; i < arrayValues.length; i++) {</p>
+                        
+                        <p style="text-indent: 60px;">  for(var j = 0; j < (arrayValues.length - i - 1); j++){</p>
+                            
+                            <p style="text-indent: 90px;">   if (arrayValues[j] > arrayValues[j + 1]){</p>
+                                <p style="text-indent: 120px;">   var temp = arrayValues[j];</p>
+                                <p style="text-indent: 120px;">  arrayValues[j] = arrayValues[j + 1];</p>
+                                <p style="text-indent: 120px;">  arrayValues[j + 1] = temp;</p>
+                               <p style="text-indent: 90px;">}</p>                                 
+                       <p style="text-indent: 60px;">}</p>                       
+                  <p style="text-indent: 30px;">}</p>
+                <p>}</p>
+            </div>
+
+            <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey" width="800px" style="display: none; color: #A27B5C;" id="bubbleTimeComplex">
+                <div class="w3-quarter w3-section">
+                  <span class="w3-xlarge">O(n^2)</span><br>
+                  Time Complexity
+                </div>
+                <div class="w3-quarter w3-section">
+                  <span class="w3-xlarge">Ω(n)</span><br>
+                  Best Case
+                </div>
+                <div class="w3-quarter w3-section">
+                  <span class="w3-xlarge">(n)</span><br>
+                  Space Complexity
+                </div>
+                <div class="w3-quarter w3-section">
+                  <span class="w3-xlarge">Easiest</span><br>
+                  Sorting Algorithm
+                </div>
+              </div>
+
+        </div>
+        
+
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
